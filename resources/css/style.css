@@ -1,0 +1,142 @@
+/*Tim Baiton's CodeAcademy MyTimes project - stylesheet.*/
+
+    /*CSS for the body of the website*/
+
+body {
+  margin: 0;
+  background-color: white;
+  font-family: Georgia;
+  font-size: 17px;
+  color: black;
+}
+/*as per instruction #3 in assignment, place border around all divs (to be removed later)*/
+div {
+    border: 1px solid #000000;
+}
+
+    /*CSS rules that apply to the header, header logo, and header navigation of the page.  The logo and nav items
+     are children of Header. Header is a flex container, which makes the logo and nav flex items. (page 2/15 flexbox lesson)*/
+
+header {
+  display: flex;
+  z-index: 5;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: 80px;
+
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+header nav {
+  padding-right: 40px;
+}
+nav span {
+  display: inline-block;
+  padding: 20px 10px;
+}
+a {
+  color: black;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Georgia;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 30px;
+
+}
+.logo img {
+  width: 70px;
+  height: 60px;
+  margin-right: 12px;
+}
+.logo span {
+  color: MediumAquamarine;
+}
+
+                                    /*CSS rules for the main content container and the three columns on the page*/
+
+.MainContentContainer {
+  display: flex;
+  width: 100%
+  margin: 0 auto;
+}
+
+/*This .column class selector is a child of .MainContentContainer and a parent of .small, .medium and .large class selectors.  So .column is a flex container and flex item */
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The .large, .medium, and .small classes are children of .MainContentContainer and .column, which are flex containers.
+That means that .large, .medium and .small are flex items. (see page 2/15 of flexbox lesson) */
+
+/*Chained selectors; styles for elements with column AND large classes.*/
+.column.large {
+  width: 630px;
+}
+
+/*Chained selectors; styles for elements with column AND medium classes.*/
+.column.medium {
+  border: 1px solid black:
+  width: 300px;
+}
+
+/*Chained selectors; styles for elements with column AND small classes.*/
+.column.small {
+  border: 1px solid black:
+  width: 240px;
+}
+
+/*CSS to control the text that floats on top of the image articles*/
+.text-over-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  font-family: Georgia;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+/*CSS for the nested elements: anchor article and the text that floats over it*/
+.anchor-article .text-over-image {
+  background-image: url(../images/img-story-main.png);
+  width: 630px;
+  margin-top: 0;
+  font-size: 40px;
+  text-align: left;
+}
+
+.lead-story .image-content span {
+  margin-left: 20px;
+}
+
+
+
+/*Chained selectors; CSS for earth spins element to control the background image and text over the image*/
+.earth-spins.text-over-image {
+  background-image: url(../images/img-story-2.png);
+}
+
+
+/*CSS to control the structure of the paragraphs in each article*/
+.article-paragraph {
+  margin-top: 16px;
+}
